@@ -29,6 +29,10 @@ public class FBLoginTest extends AbstractTest {
 	private String password;
 	private String expectedResult;
 
+	/*
+	 * The arguments for the constructor should in the same order as the
+	 * fields in the data CSV file. 
+	 */
 	public FBLoginTest(String emailAddress, String password, String expectedResult)
 	{
 		this.emailAddress = emailAddress;
@@ -36,6 +40,10 @@ public class FBLoginTest extends AbstractTest {
 		this.expectedResult = expectedResult;
 	}
 	
+	/*
+	 * This method will automatically be run when the test class is run
+	 * 
+	 */
 	@Parameters
 	public static Collection<String[]> data() throws IOException {
 		return getTestData();
